@@ -35,58 +35,65 @@ sudo apt install git curl build-essential nano screen -y
 ```
 
 2. Install Node.js v18 using NVM
-
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 nvm install 18
 nvm use 18
+```
 
 3. Install Rust
-
+```bash
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source ~/.cargo/env
+```
 
 4. Install Yarn
-
+```bash
 npm install -g yarn
+```
 
 5. Clone Nexus Repo and Build From Source
-
+```bash
 cd ~
 git clone https://github.com/nexus-xyz/nexus-cli.git
 cd nexus-cli
 yarn install
 yarn build
+```
 
 6. Create Config with Your Node ID
-
+```bash
 mkdir ~/.nexus
 nano ~/.nexus/config.json
+```
 
 Paste the following (replace with your actual Node ID and wallet):
-
+```bash
 {
   "nodeId": "YOUR_NODE_ID",
   "wallet": "YOUR_WALLET_ADDRESS",
   "numWorkers": 4,
   "proofTimeout": 600
 }
-
+```
 Save with Ctrl + X, then Y, then Enter.
 
 7. Run Node in Screen Session
-
+```bash
 screen -S nexus
 cd ~/nexus-cli
 node dist/index.js start
+```
 
 To detach screen (let node run in background):
 
 Ctrl + A → then D
 
 8. Reconnect to Screen Anytime
-
+```bash
 screen -r nexus
+```
 
 ---
 
