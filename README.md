@@ -110,9 +110,6 @@ Using your real Node ID
 Running 24/7 in a screen session
 
 
-You can monitor activity in screen logs or with: https://nexus-stats.shahzuby.com/
-
-
 ---
 
 🔗 Connect with Me
